@@ -15,6 +15,15 @@ namespace LeetCode
 
             
         }
+        public int Tribonacci(int n)
+        {
+            var list = new List<int>() { 0, 1, 1 };
+            for (int i = 3; i <= n; i++)
+            {
+                list.Add(list[i - 1] + list[i - 2] + list[i - 3]);
+            }
+            return list[n];
+        }
         public bool isPolindrom(string s)
         {
             int i = 0;
